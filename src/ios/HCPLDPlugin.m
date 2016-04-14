@@ -87,6 +87,8 @@ static NSString *const HOT_CODE_PUSH_PLUGIN = @"HCPPlugin";
         return;
     }
     
+    devServerURL = [[NSUserDefaults standardUserDefaults] stringForKey:@"chcp_local_dev_server_address"];
+    
     @try {
         _socketIOClient = [[SocketIOClient alloc] initWithSocketURL:devServerURL options:nil];
         
